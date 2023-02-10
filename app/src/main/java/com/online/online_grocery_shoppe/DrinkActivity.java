@@ -9,12 +9,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-public class HomeActivity extends AppCompatActivity {
+public class DrinkActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_drink);
         androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar); setSupportActionBar(toolbar);
     }
     @Override
@@ -22,6 +22,8 @@ public class HomeActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_bar,menu);
         return super.onCreateOptionsMenu(menu);
     }
+
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
@@ -39,14 +41,17 @@ public class HomeActivity extends AppCompatActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
     public void showAllProduct(View view) {
         Intent intent =new Intent(getApplicationContext(),HomeActivity.class);
         startActivity(intent);
     }
+
     public void showAllFruits(View view) {
         Intent intent =new Intent(getApplicationContext(),FruitActivity.class);
         startActivity(intent);
     }
+
     public void showAllDrinks(View view) {
         Intent intent =new Intent(getApplicationContext(),DrinkActivity.class);
         startActivity(intent);
@@ -61,7 +66,7 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent =new Intent(getApplicationContext(),CartActivity.class);
         startActivity(intent);
     }
-//Bottom Bar
+    //Bottom Bar
     public void goToHome(MenuItem item) {
         Intent intent =new Intent(getApplicationContext(),HomeActivity.class);
         startActivity(intent);
@@ -79,11 +84,6 @@ public class HomeActivity extends AppCompatActivity {
 
     public void showGroups(MenuItem item) {
         Intent intent =new Intent(getApplicationContext(),ContactActivity.class);
-        startActivity(intent);
-    }
-
-    public void showDetails(View view) {
-        Intent intent =new Intent(getApplicationContext(),DetailActivity.class);
         startActivity(intent);
     }
 }

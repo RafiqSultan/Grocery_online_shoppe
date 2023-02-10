@@ -6,18 +6,60 @@
     android:layout_height="match_parent"
     android:background="@drawable/gr"
     tools:context=".ContactActivity">
-
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_main"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Contact US"
+        app:menu="@menu/menu_bar"
+        app:titleTextColor="@color/white" />
    <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:orientation="vertical"
        android:gravity="center_vertical">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:background="#111"
+           android:padding="5dp"
+           android:orientation="vertical">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Development Mobile app"
+               android:textSize="22dp"
+               android:textStyle="bold"
+               android:textColor="#fff"
+               android:gravity="center"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Couse ID : TKM-343"
+               android:textSize="20dp"
+               android:textColor="#fff"
+               android:gravity="center"/>
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Group ID : 2149"
+               android:textSize="20dp"
+               android:textColor="#fff"
+               android:gravity="center"/>
+       </LinearLayout>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_marginBottom="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
-        android:backgroundTint="@color/color_opacity"
+        android:backgroundTint="#fff"
+
         app:cardCornerRadius="15dp"
         android:layout_height="80dp">
         <LinearLayout
@@ -50,7 +92,7 @@
            android:layout_marginBottom="15dp"
            android:layout_marginRight="15dp"
            android:layout_marginLeft="15dp"
-           android:backgroundTint="@color/color_opacity"
+           android:backgroundTint="#fff"
            app:cardCornerRadius="15dp"
            android:layout_height="80dp">
            <LinearLayout
@@ -85,7 +127,7 @@
            android:layout_marginBottom="15dp"
            android:layout_marginRight="15dp"
            android:layout_marginLeft="15dp"
-           android:backgroundTint="@color/color_opacity"
+           android:backgroundTint="#fff"
            app:cardCornerRadius="15dp"
            android:layout_height="80dp">
            <LinearLayout
@@ -118,7 +160,7 @@
            android:layout_marginBottom="15dp"
            android:layout_marginRight="15dp"
            android:layout_marginLeft="15dp"
-           android:backgroundTint="@color/color_opacity"
+           android:backgroundTint="#fff"
            app:cardCornerRadius="15dp"
            android:layout_height="80dp">
            <LinearLayout
@@ -153,7 +195,7 @@
            android:layout_marginBottom="15dp"
            android:layout_marginRight="15dp"
            android:layout_marginLeft="15dp"
-           android:backgroundTint="@color/color_opacity"
+           android:backgroundTint="#fff"
            app:cardCornerRadius="15dp"
            android:layout_height="80dp">
            <LinearLayout
@@ -185,5 +227,14 @@
        </androidx.cardview.widget.CardView>
 
    </LinearLayout>
-
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_title"
+        app:itemTextColor="#fff"
+        app:itemIconTint="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_bar" />
 </androidx.constraintlayout.widget.ConstraintLayout>

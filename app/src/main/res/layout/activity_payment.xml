@@ -16,11 +16,12 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@color/color_main"
         app:title="Payment"
+        app:menu="@menu/menu_bar"
         app:titleTextColor="@color/white"/>
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:text="Checkout : 200"
+    android:text="Checkout : 91 SAR"
     android:layout_marginLeft="15dp"
     android:textColor="@color/color_title"
     android:textStyle="bold"
@@ -75,7 +76,7 @@
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:cardCornerRadius="8dp">
 
         <TextView
@@ -100,7 +101,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
             android:text="Full Name"
             android:textColor="#111"
             android:textSize="16dp"
@@ -115,9 +115,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
             android:text="Mobile"
-
             android:textColor="#111"
             android:textSize="16dp"
             />
@@ -132,7 +130,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
             android:text="Address"
             android:textColor="#111"
             android:textSize="16dp"
@@ -148,7 +145,7 @@
             android:layout_height="60dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="10dp"
             android:text="Payment"
             android:onClick="goToMyOrder"
             android:padding="5dp"
@@ -156,4 +153,11 @@
 
 
     </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_title"
+        app:itemTextColor="#fff"
+        app:itemIconTint="#fff"
+        app:menu="@menu/bottom_bar" />
 </LinearLayout>
